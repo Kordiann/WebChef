@@ -1,0 +1,24 @@
+$black-color: #252629;
+$grey-color: #9b9fa8;
+$blue-color: #5e92fc;
+$dark-blue-color: #325395;
+$red-color: #e5322c;
+$yellow-color: #fabb2b;
+$green-color: #68bb4b;
+
+$button-grey: #6e7c98;
+$background-grey: #f3f4f5;
+$breadcrumb-grey: #6a6d75;
+$border-grey: rgba(0, 0, 0, 0.04);
+
+$menu-item-color: #6a6d75;
+
+@mixin row {
+	display: flex;
+	flex-direction: row;
+}
+
+@mixin col {
+	display: flex;
+	flex-direction: column;
+}
