@@ -1,0 +1,33 @@
+@import "src/assets/styles/global.scss";
+
+:host {
+	align-self: center;
+}
+
+button {
+	display: block;
+	height: 38px;
+	padding: 0 25px;
+	line-height: 35px;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	border: 0;
+	border-radius: 4px;
+}
+
+.red {
+	background: $red-color;
+}
+
+.yellow {
+	background: $yellow-color;
+}
+
+.grey {
+	background: $button-grey;
+}
+
+.blue {
+	background: $blue-color;
+}

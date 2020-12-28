@@ -1,0 +1,171 @@
+@import 'src/assets/styles/global.scss';
+
+* {
+	line-height: 1.15em;
+}
+
+:host {
+	display: flex;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+p {
+	margin: 0;
+}
+
+::ng-deep {
+	.ant-menu-inline-collapsed {
+		width: auto;
+	}
+}
+
+.app-layout {
+	height: 100vh;
+}
+
+nz-sider.menu-sidebar {
+	position: relative;
+	z-index: 10;
+	min-height: 100vh;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
+	background-color: #fff;
+}
+
+.header-trigger {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+	transition: all .3s, padding 0s;
+	width: 20px;
+	margin: 25px 0 0 34px;
+
+	img:first-child {
+		margin: 0;
+	}
+
+	img {
+		height: 2px;
+		margin-top: 4px;
+		user-select: none;
+	}
+}
+
+.side-menu {
+	text-transform: capitalize;
+	margin-top: 54px;
+	white-space: nowrap;
+}
+
+.inner-content {
+	padding: 27px 25px 0;
+	background: #fff;
+	height: 100%;
+}
+
+.date-time-container {
+	margin: 0 0 17px;
+	padding: 0 0 0 34px;
+	@include col;
+
+	p {
+		font-size: 14px;
+		color: $grey-color;
+	}
+
+	p:nth-child(2) {
+		font-size: 26px;
+		font-weight: 300;
+		color: $black-color;
+		margin: 5px 0 8px;
+		line-height: 1em;
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+#user-menu {
+	padding: 18px 0 11px 34px;
+	background: $background-grey;
+	border-top: 2px solid $border-grey;
+	border-bottom: 2px solid $border-grey;
+
+	> .header {
+		@include row;
+
+		> span {
+			color: $blue-color;
+			margin-left: 13px;
+			align-self: center;
+		}
+	}
+
+	> ul {
+		font-size: 12px;
+		margin: 29px 0 0 53px;
+		list-style: square;
+
+		> li {
+			color: $menu-item-color;
+			margin-bottom: 26px;
+			cursor: pointer;
+			outline: 0;
+		}
+
+		> li:last-child {
+			font-weight: bold;
+		}
+
+		> .active {
+			color: $blue-color;
+		}
+	}
+}
+
+nz-header {
+	@include row;
+	justify-content: space-between;
+	background: #fff;
+	height: 60px;
+	padding: 0;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.04);
+
+	div {
+		@include row;
+	}
+}
+
+#header-info {
+	height: 60px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	li {
+		display: inline-block;
+		text-align: center;
+		width: 120px;
+		height: 60px;
+		fill: #ffffff;
+		stroke-width: 1;
+		border-right: 2px solid rgba(0, 0, 0, 0.04);
+	}
+
+	p {
+		height: 13px;
+		font-size: 11px;
+		color: #9b9fa8;
+		text-transform: uppercase;
+		text-align: center;
+		margin: 15px 0 1px;
+	}
+
+	strong {
+		color: $black-color;
+		font-weight: 400;
+	}
+}

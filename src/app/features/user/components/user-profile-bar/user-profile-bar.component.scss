@@ -1,0 +1,26 @@
+@import 'src/assets/styles/global.scss';
+
+#user-bar {
+	width: 180px;
+	height: 60px;
+	border-left: 2px solid rgba(0, 0, 0, 0.04);
+	cursor: pointer;
+	@include row;
+
+	img {
+		width: 26px;
+		height: 26px;
+		align-self: center;
+		margin-left: 12px;
+	}
+
+	p {
+		align-self: center;
+		margin: 0 0 0 10px;
+	}
+
+	svg-icon {
+		align-self: center;
+		margin-left: 18px;
+	}
+}

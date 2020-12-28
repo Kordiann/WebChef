@@ -1,0 +1,22 @@
+<header id="edit-header">
+	<div>
+		<nz-breadcrumb>
+			<nz-breadcrumb-item>
+				Users
+			</nz-breadcrumb-item>
+			<nz-breadcrumb-item>
+				User Edit
+			</nz-breadcrumb-item>
+		</nz-breadcrumb>
+		<p>Hugh Jackman</p>
+	</div>
+	<div>
+		<user-btn [color]="color.red">delete</user-btn>
+		<user-btn [color]="color.grey">block</user-btn>
+		<user-btn [color]="color.yellow">set password</user-btn>
+		<user-btn [color]="color.blue">save</user-btn>
+	</div>
+</header>
+<main>
+	<user-status-tab></user-status-tab>
+</main>

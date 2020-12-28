@@ -1,0 +1,82 @@
+@import "src/assets/styles/global.scss";
+
+nz-tabset#user-status-tab {
+	min-width: 946px;
+	min-height: 800px;
+	border-radius: 2px;
+
+	::ng-deep {
+		.ant-tabs-nav {
+			margin: 0;
+			padding-left: 37px;
+			border-top: 1px solid #f0f0f0;
+			border-left: 1px solid #f0f0f0;
+			border-right: 1px solid #f0f0f0;
+		}
+
+		.ant-tabs-tab:first-child {
+			margin-right: 78px;
+		}
+
+		.ant-tabs-tab-btn {
+			font-size: 12px;
+			color: $grey-color;
+		}
+
+		.ant-tabs-tab.ant-tabs-tab-active  {
+			.ant-tabs-tab-btn {
+				color: $black-color;
+			}
+		}
+
+		.ant-tabs-content-holder {
+			padding: 16px;
+			border: 1px solid #dbdde0;
+		}
+	}
+}
+
+header#user-status-header {
+	@include row;
+	padding-bottom: 25px;
+	justify-content: space-between;
+	border-bottom: 1px solid #f0f0f0;
+
+	p:first-child {
+		color: $blue-color;
+		font-weight: 500;
+		font-size: 16px;
+		margin-left: 4px;
+	}
+
+	p {
+		margin: 0;
+		align-self: center;
+
+		> span {
+			color: $dark-blue-color;
+			font-size: 18px;
+			font-weight: 400;
+		}
+
+		> b {
+			margin-left: 8px;
+			font-weight: 400;
+		}
+	}
+
+	.select {
+		@include col;
+		font-size: 10px;
+
+		::ng-deep {
+			.ant-select-multiple .ant-select-selector {
+				padding: 3px 7px;
+			}
+		}
+	}
+
+	nz-select {
+		width: 350px;
+	}
+}

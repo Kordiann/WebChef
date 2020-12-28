@@ -1,0 +1,24 @@
+<nz-tabset [nzSelectedIndex]="1" id="user-status-tab">
+	<nz-tab [nzDisabled]="true" nzTitle="Logs">
+	</nz-tab>
+	<nz-tab nzTitle="Permissions">
+		<header id="user-status-header">
+			<p><span>Role:</span> {{ role }}</p>
+
+			<p class="select">
+				<b>Asign role</b>
+				<nz-select
+						[nzMaxTagCount]="1"
+						[nzMaxTagPlaceholder]="tagPlaceHolder"
+						nzMode="multiple"
+						nzPlaceHolder="Please select"
+						[(ngModel)]="listOfSelectedValue"
+				>
+					<nz-option *ngFor="let item of listOfOption" [nzLabel]="item" [nzValue]="item"></nz-option>
+				</nz-select>
+			</p>
+			<ng-template #tagPlaceHolder let-selectedList> and {{ selectedList.length }} more selected</ng-template>
+		</header>
+		<user-status-table></user-status-table>
+	</nz-tab>
+</nz-tabset>
