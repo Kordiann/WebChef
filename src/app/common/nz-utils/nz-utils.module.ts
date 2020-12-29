@@ -4,6 +4,7 @@ import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
@@ -13,6 +14,7 @@ const nzModules = [
     NzBadgeModule,
     NzBreadCrumbModule,
     NzDatePickerModule,
+    NzModalModule,
     NzIconModule,
     NzTableModule,
     NzTabsModule,
