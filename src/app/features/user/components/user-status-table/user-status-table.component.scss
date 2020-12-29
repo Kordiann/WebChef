@@ -1,6 +1,12 @@
 @import "src/assets/styles/global.scss";
 
 nz-table#user-status-table {
+	::ng-deep {
+		.ant-table-cell {
+			background: #fff;
+		}
+	}
+
 	span {
 		font-weight: 500;
 		font-size: 12px;

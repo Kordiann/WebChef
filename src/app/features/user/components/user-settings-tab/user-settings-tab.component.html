@@ -1,0 +1,103 @@
+<nz-tabset class="user-tab">
+	<nz-tab nzTitle="Statistics">
+		<form [formGroup]="settingsForm" (ngSubmit)="submitUserEditForm()">
+			<section>
+				<div>
+					<h1>Personal Data</h1>
+					<nz-form-item>
+						<nz-form-label nzFor="name">name</nz-form-label>
+						<nz-form-control nzErrorTip="Please input your username!">
+							<input nz-input formControlName="name" name="name" type="text" id="name">
+						</nz-form-control>
+					</nz-form-item>
+					<nz-form-item>
+						<nz-form-label nzFor="last-name">last name</nz-form-label>
+						<nz-form-control>
+							<input nz-input formControlName="lastName" name="last-name" type="text" id="last-name">
+						</nz-form-control>
+					</nz-form-item>
+					<nz-form-item>
+						<nz-form-label nzFor="birthdate">birthdate</nz-form-label>
+						<nz-form-control>
+							<nz-date-picker [nzSuffixIcon]="suffixTemplateCalendar" formControlName="birthdate"></nz-date-picker>
+							<ng-template #suffixTemplateCalendar><svg-icon src="/assets/icons/calendar.svg"></svg-icon></ng-template>
+						</nz-form-control>
+					</nz-form-item>
+				</div>
+				<div>
+					<nz-form-item>
+						<nz-form-control>
+							<nz-upload
+									nzType="drag"
+									nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+									(nzChange)="handleChange($event)"
+							>
+								<p class="ant-upload-drag-icon">
+									<svg-icon src="/assets/icons/upload.svg"></svg-icon>
+								</p>
+								<p class="ant-upload-text">upload photo</p>
+								<p class="ant-upload-hint">
+									Drag and Drop photo or select from files
+								</p>
+							</nz-upload>
+						</nz-form-control>
+					</nz-form-item>
+					<p class="select">
+						<b>Citizenship</b>
+						<nz-form-item>
+							<nz-form-control>
+								<nz-select
+										[nzMaxTagCount]="1"
+										[nzMaxTagPlaceholder]="tagPlaceHolder"
+										nzMode="multiple"
+										formControlName="citizenship"
+										nzPlaceHolder="Please select"
+								>
+									<nz-option *ngFor="let item of listOfOption"
+									           [nzLabel]="item"
+									           [nzValue]="item"></nz-option>
+								</nz-select>
+							</nz-form-control>
+						</nz-form-item>
+					</p>
+					<ng-template #tagPlaceHolder
+					             let-selectedList> and {{ selectedList.length }} more selected
+					</ng-template>
+				</div>
+			</section>
+			<section id="contact-info">
+				<div>
+					<h1>Contact Information</h1>
+					<nz-form-item>
+						<nz-form-label nzFor="instagram">instagram</nz-form-label>
+						<nz-form-control>
+							<input nz-input formControlName="instagram" name="instagram" type="text" id="instagram">
+						</nz-form-control>
+					</nz-form-item>
+					<nz-form-item>
+						<nz-form-label nzFor="twitter">twitter</nz-form-label>
+						<nz-form-control>
+							<input nz-input formControlName="twitter" name="twitter" type="text" id="twitter">
+						</nz-form-control>
+					</nz-form-item>
+				</div>
+				<div>
+					<nz-form-item>
+						<nz-form-label nzFor="email">email</nz-form-label>
+						<nz-form-control>
+							<input nz-input formControlName="email" name="email" type="email" id="email">
+						</nz-form-control>
+					</nz-form-item>
+					<nz-form-item>
+						<nz-form-label nzFor="facebook">facebook</nz-form-label>
+						<nz-form-control>
+							<input nz-input formControlName="facebook" name="facebook" type="text" id="facebook">
+						</nz-form-control>
+					</nz-form-item>
+				</div>
+			</section>
+		</form>
+	</nz-tab>
+	<nz-tab nzTitle="Settings" [nzDisabled]="true">
+	</nz-tab>
+</nz-tabset>

@@ -9,6 +9,7 @@ import { UserNotificationBarComponent } from './components/user-notification-bar
 import { UserBtnComponent } from './components/buttons/user-btn/user-btn.component';
 import { UserStatusTabComponent } from './components/user-status-tab/user-status-tab.component';
 import { UserStatusTableComponent } from './components/user-status-table/user-status-table.component';
+import { UserSettingsTabComponent } from './components/user-settings-tab/user-settings-tab.component';
 
 const components = [
     UserEditPageComponent,
@@ -16,6 +17,7 @@ const components = [
     UserNotificationBarComponent,
     UserStatusTabComponent,
     UserStatusTableComponent,
+    UserSettingsTabComponent,
 ];
 
 const buttons = [

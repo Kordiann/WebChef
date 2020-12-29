@@ -32,7 +32,7 @@ registerLocaleData(en);
         IconsProviderModule,
         NzLayoutModule,
         NzMenuModule,
-        UserModule,
+        UserModule
     ],
     providers: [{provide: NZ_I18N, useValue: en_US}],
     bootstrap: [AppComponent]

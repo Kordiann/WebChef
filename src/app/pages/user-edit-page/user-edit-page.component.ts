@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { buttonType } from '@core/models/button-type';
 import { color } from '@core/models/color';
 
 @Component({
@@ -8,4 +9,5 @@ import { color } from '@core/models/color';
 })
 export class UserEditPageComponent {
     color = color;
+    buttonType = buttonType;
 }
