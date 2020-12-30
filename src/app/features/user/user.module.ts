@@ -8,8 +8,9 @@ import { UserProfileBarComponent } from './components/user-profile-bar/user-prof
 import { UserNotificationBarComponent } from './components/user-notification-bar/user-notification-bar.component';
 import { UserBtnComponent } from './components/buttons/user-btn/user-btn.component';
 import { UserStatusTabComponent } from './components/user-status-tab/user-status-tab.component';
-import { UserStatusTableComponent } from './components/user-status-table/user-status-table.component';
+import { UserStatusTableComponent } from './components/user-status-tab/user-status-table/user-status-table.component';
 import { UserSettingsTabComponent } from './components/user-settings-tab/user-settings-tab.component';
+import { UserStatusTableItemComponent } from './components/user-status-tab/user-status-table/user-status-table-item/user-status-table-item.component';
 
 const components = [
     UserEditPageComponent,
@@ -18,6 +19,7 @@ const components = [
     UserStatusTabComponent,
     UserStatusTableComponent,
     UserSettingsTabComponent,
+    UserStatusTableItemComponent,
 ];
 
 const buttons = [

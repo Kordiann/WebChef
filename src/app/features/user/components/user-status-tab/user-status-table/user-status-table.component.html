@@ -9,7 +9,7 @@
 	<tr *ngFor="let data of listOfData">
 		<td><span>{{ data.name }}</span></td>
 		<td class="actions">
-			<user-btn *ngFor="let action of data.actions" [color]="action.color">{{ action.title }}</user-btn>
+			<user-status-table-item [colors]="data.colors"></user-status-table-item>
 		</td>
 	</tr>
 	</tbody>

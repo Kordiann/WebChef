@@ -3,4 +3,6 @@ export enum color {
     yellow = 'yellow',
     blue = 'blue',
     grey = 'grey',
+    green = 'green',
+    white = 'white',
 }

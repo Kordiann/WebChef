@@ -2,118 +2,62 @@ import { color } from '@core/models/color';
 
 export interface TableItem {
     name: string,
-    actions: TableItemAction[],
+    colors: TableItemAction,
 }
 
 export interface TableItemAction {
-    color: color,
-    title: string,
+    create: color,
+    read: color,
+    update: color,
+    delete: color,
 }
 
 export const listOfUserData: TableItem[] = [
     {
         name: 'script',
-        actions: [
+        colors:
             {
-                color: color.grey,
-                title: 'create',
+                create: color.white,
+                read: color.blue,
+                update: color.yellow,
+                delete: color.white,
             },
-            {
-                color: color.blue,
-                title: 'read',
-            },
-            {
-                color: color.yellow,
-                title: 'update',
-            },
-            {
-                color: color.grey,
-                title: 'delete',
-            }
-        ],
+
     },
     {
         name: 'props',
-        actions: [
-            {
-                color: color.blue,
-                title: 'create',
+        colors: {
+                create: color.white,
+                read: color.blue,
+                update: color.white,
+                delete: color.red,
             },
-            {
-                color: color.red,
-                title: 'create',
-            },
-            {
-                color: color.yellow,
-                title: 'update',
-            },
-            {
-                color: color.grey,
-                title: 'delete',
-            }
-        ]
     },
     {
         name: 'scenes',
-        actions: [
-            {
-                color: color.blue,
-                title: 'delete',
+        colors: {
+                create: color.white,
+                read: color.blue,
+                update: color.yellow,
+                delete: color.red,
             },
-            {
-                color: color.red,
-                title: 'delete',
-            },
-            {
-                color: color.red,
-                title: 'create',
-            },
-            {
-                color: color.grey,
-                title: 'delete',
-            }
-        ]
     },
     {
         name: 'money',
-        actions: [
-            {
-                color: color.grey,
-                title: 'read',
+        colors: {
+                create: color.green,
+                read: color.white,
+                update: color.white,
+                delete: color.red,
             },
-            {
-                color: color.grey,
-                title: 'update',
-            },
-            {
-                color: color.yellow,
-                title: 'create',
-            },
-            {
-                color: color.blue,
-                title: 'create',
-            }
-        ]
     },
     {
         name: 'stunt',
-        actions: [
-            {
-                color: color.grey,
-                title: 'create',
-            },
-            {
-                color: color.blue,
-                title: 'read',
-            },
-            {
-                color: color.yellow,
-                title: 'update',
-            },
-            {
-                color: color.grey,
-                title: 'delete',
-            }
-        ]
+        colors: {
+            create: color.white,
+            read: color.blue,
+            update: color.yellow,
+            delete: color.red,
+        },
     }
 ];
